@@ -1,0 +1,1 @@
+import{j as t}from"./app-BEcGHGAH.js";const s="/build/assets/Logo-70yFCks1.png";function g(o){return t.jsx("img",{...o,src:s,alt:"App Logo",style:{width:"40px",height:"42px",...o.style}})}export{g as A};
