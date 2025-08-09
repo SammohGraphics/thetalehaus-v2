@@ -75,10 +75,10 @@ export const ContactSection = () => {
             <span className="text-sm font-medium text-teal-700 dark:text-teal-400">Get in touch</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-            Let's Build <span className="text-teal-600 dark:text-teal-400">Something Amazing</span>
+            Let&apos;s Build <span className="text-teal-600 dark:text-teal-400">Something Amazing</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Ready to start your project? Fill out the form and we'll get back to you within 24 hours.
+            Ready to start your project? Fill out the form and we&apos;ll get back to you within 24 hours.
           </p>
         </motion.div>
 

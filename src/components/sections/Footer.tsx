@@ -1,10 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Card, CardContent } from '@/components/ui/card';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { 
   Mail, 
   Phone, 
@@ -15,8 +12,6 @@ import {
   Send
 } from 'lucide-react';
 import { SocialIcon } from '@/components/ui/SocialIcon';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { cn } from "@/lib/utils";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
@@ -31,6 +26,7 @@ export const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-50 via-white to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-teal-400/10 blur-3xl dark:bg-teal-600/10 animate-float-slow"></div>
         <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-emerald-400/10 blur-3xl dark:bg-emerald-600/10 animate-float"></div>
@@ -45,15 +41,19 @@ export const Footer = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16"
         >
+          {/* Company Info Column */}
           <div className="space-y-6">
             <motion.div 
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3"
             >
-              <img 
-                src="/logo.png" 
-                alt="The Tale Haus" 
-                className="h-20 transition-transform duration-300 hover:rotate-[15deg]" 
+              <Image
+                src="/logo.png"
+                alt="The Tale Haus Logo"
+                width={80}
+                height={80}
+                className="h-20 w-auto transition-transform duration-300 hover:rotate-[15deg]"
+                priority={false}
               />
             </motion.div>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -86,6 +86,7 @@ export const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links Column */}
           <div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-7 relative inline-block">
               Quick Links
@@ -125,6 +126,7 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Services Column */}
           <div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-7 relative inline-block">
               Our Services
@@ -158,6 +160,7 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact Column */}
           <div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-7 relative inline-block">
               Get In Touch
@@ -214,6 +217,7 @@ export const Footer = () => {
           </div>
         </motion.div>
 
+        {/* Newsletter Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -248,7 +252,7 @@ export const Footer = () => {
                   </h4>
                 </div>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  You'll receive our next update soon.
+                  You&apos;ll receive our next update soon.
                 </p>
               </motion.div>
             ) : (
@@ -278,6 +282,7 @@ export const Footer = () => {
           </div>
         </motion.div>
 
+        {/* Copyright Section */}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -307,6 +312,7 @@ export const Footer = () => {
         </motion.div>
       </div>
 
+      {/* Decorative floating dots */}
       <div className="absolute bottom-10 left-10 w-8 h-8 rounded-full bg-teal-400/20 animate-float-slow"></div>
       <div className="absolute top-20 right-16 w-6 h-6 rounded-full bg-emerald-400/20 animate-float-delay"></div>
       <div className="absolute top-1/3 left-1/4 w-4 h-4 rounded-full bg-teal-400/15 animate-float"></div>

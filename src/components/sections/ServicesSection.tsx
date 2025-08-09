@@ -87,7 +87,7 @@ export const ServicesSection = () => {
         <p className="text-muted-foreground">
           Not sure what you need?{' '}
           <span className="text-teal-600 dark:text-teal-400 font-medium cursor-pointer hover:underline">
-            Let's discuss your project
+            Let&apos;s discuss your project
           </span>
         </p>
       </motion.div>

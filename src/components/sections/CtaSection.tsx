@@ -21,7 +21,7 @@ export const CtaSection = () => (
         viewport={{ once: true }}
         className="text-base sm:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto text-teal-100"
       >
-        Let's create something extraordinary together. Get in touch with our team today.
+        Let&apos;s create something extraordinary together. Get in touch with our team today.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
